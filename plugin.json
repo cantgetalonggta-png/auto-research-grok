@@ -1,0 +1,8 @@
+{
+  "name": "auto-research-grok",
+  "version": "1.0.0",
+  "description": "Autonomous research agent skill — knowledge-gap detection, xAI SDK driver, multi-agent research chain, gated tool install.",
+  "author": { "name": "local" },
+  "keywords": ["research", "auto-research", "xai-sdk", "multi-agent"],
+  "license": "MIT"
+}
