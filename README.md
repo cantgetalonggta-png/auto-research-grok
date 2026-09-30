@@ -1,19 +1,23 @@
 # auto-research-grok plugin
 
-Grok Build plugin for autonomous research with xAI SDK driver.
+Grok Build plugin for autonomous research.
 
-## Local test
+## Backends
+
+- `AI_GATEWAY_API_KEY` + OpenAI SDK → `https://ai-gateway.vercel.sh/v1`
+- `XAI_API_KEY` + xai-sdk
 
 ```bash
-grok --plugin-dir /path/to/auto-research-grok
+export AI_GATEWAY_API_KEY=...   # or XAI_API_KEY
+pip install openai   # gateway path
+# or: pip install xai-sdk
+python skills/auto-research-grok/scripts/auto_research_driver.py "your question"
 ```
 
-## Driver
+Local plugin test:
 
 ```bash
-export XAI_API_KEY=...
-pip install xai-sdk
-python skills/auto-research-grok/scripts/auto_research_driver.py "your question"
+grok --plugin-dir .
 ```
 
 Do not commit API keys.
