@@ -1,23 +1,19 @@
 # auto-research-grok plugin
 
-Grok Build plugin for autonomous research.
+Autonomous research + safe API key checks.
 
-## Backends
-
-- `AI_GATEWAY_API_KEY` + OpenAI SDK → `https://ai-gateway.vercel.sh/v1`
-- `XAI_API_KEY` + xai-sdk
+## Drivers
 
 ```bash
+python skills/auto-research-grok/scripts/api_keys_driver.py --verify --json
+
 export AI_GATEWAY_API_KEY=...   # or XAI_API_KEY
-pip install openai   # gateway path
-# or: pip install xai-sdk
 python skills/auto-research-grok/scripts/auto_research_driver.py "your question"
 ```
 
-Local plugin test:
+## Secrets
 
-```bash
-grok --plugin-dir .
-```
+Set only in GitHub Codespaces Secrets and Vercel Environment Variables.
+See `skills/auto-research-grok/references/api-keys-ops.md`.
 
 Do not commit API keys.
